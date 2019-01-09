@@ -4,9 +4,10 @@ import socket
 import random
 import json
 
-option_a = os.getenv('OPTION_A', "Cats")
-option_b = os.getenv('OPTION_B', "Dogs")
+option_a = os.getenv('OPTION_A', 'Cats')
+option_b = os.getenv('OPTION_B', 'Dogs')
 hostname = socket.gethostname()
+namespace = os.getenv('CND_KUBERNETES_NAMESPACE', 'localhost')
 votes = {option_a: 0, option_b: 0}
 
 app = Flask(__name__)
@@ -25,6 +26,7 @@ def hello():
         hostname=hostname,
         votes_a=votes[option_a],
         votes_b=votes[option_b],
+        namespace=namespace
     ))
     return resp
 
