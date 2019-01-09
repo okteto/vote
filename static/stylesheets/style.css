@@ -42,22 +42,23 @@ button.b{
 }
 
 #hostname{
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 0;
+  text-align: center;
+  color: #9eaeb8;
+  font-size: 18px;
+  margin: 0 24px;
+}
+
+#hostname .hostname-content{
   color: #8f9ea8;
   font-size: 24px;
 }
 
 #content-container{
   z-index: 2;
-  position: relative;
   margin: 0 auto;
   display: table;
   padding: 10px;
   max-width: 940px;
-  height: 100%;
 }
 #content-container-center{
   display: table-cell;
