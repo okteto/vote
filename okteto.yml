@@ -1,0 +1,8 @@
+name: vote
+image: okteto/vote:latest
+command: ["python", "app.py"]
+workdir: /usr/src/app
+forward:
+  - 8080:8080
+persistentVolume:
+  enabled: false
