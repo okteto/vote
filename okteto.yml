@@ -4,5 +4,3 @@ command: ["python", "app.py"]
 workdir: /usr/src/app
 forward:
   - 8080:8080
-persistentVolume:
-  enabled: false
